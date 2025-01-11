@@ -3,80 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arma 3 Award Tracker</title>
-  <style>
-    /* Basic CSS to style the page */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-    #login, #data-section, #admin-section {
-      margin: 20px;
-    }
-    #login {
-      text-align: center;
-    }
-    input {
-      margin: 10px;
-      padding: 8px;
-      font-size: 16px;
-    }
-    button {
-      padding: 10px 15px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #data-section {
-      display: none;
-    }
-    #admin-section {
-      display: none;
-    }
-    .data-item {
-      margin-bottom: 10px;
-      padding: 10px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .data-item h4 {
-      margin: 0;
-    }
-  </style>
+  <title>Admin & User Panel</title>
 </head>
 <body>
-  <!-- Login Section -->
-  <div id="login">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Enter username">
-    <input type="password" id="password" placeholder="Enter password">
+  <section id="login">
+    <h1>Login</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter username" />
+    <br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter password (Admin only)" />
+    <br />
     <button id="login-btn">Login</button>
-  </div>
+  </section>
 
-  <!-- Data Section (view only) -->
-  <div id="data-section">
-    <h2>Data</h2>
+  <section id="data-section" style="display: none;">
+    <h1>Data</h1>
     <div id="data-list"></div>
-    <button id="import-btn">Import Data</button>
-  </div>
+  </section>
 
-  <!-- Admin Section (manage data) -->
-  <div id="admin-section">
-    <h2>Admin Actions</h2>
-    <button id="export-btn">Export Data</button>
-    <button id="add-award-btn">Add Award</button>
-    <button id="remove-award-btn">Remove Award</button>
+  <section id="admin-section" style="display: none;">
+    <h1>Admin Actions</h1>
     <button id="add-player-btn">Add Player</button>
     <button id="remove-player-btn">Remove Player</button>
-  </div>
+    <button id="add-award-btn">Add Award</button>
+    <button id="remove-award-btn">Remove Award</button>
+    <button id="import-btn">Import Data</button>
+    <button id="export-btn">Export Data</button>
+  </section>
 
   <script src="app.js"></script>
 </body>
