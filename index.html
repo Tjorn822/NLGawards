@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awards and Medals Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Awards and Medals Tracker</h1>
+      <div id="login" class="login-section">
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Admin Password"
+        />
+        <button id="login-btn">Login</button>
+      </div>
+
+      <div id="data-section" class="data-section" style="display: none">
+        <h2>Data</h2>
+        <div id="data-list"></div>
+        <button id="import-btn">Import JSON</button>
+        <button id="export-btn">Export JSON</button>
+        <div id="admin-section" class="admin-section" style="display: none">
+          <h3>Admin Actions</h3>
+          <button id="add-award-btn">Add Award</button>
+          <button id="remove-award-btn">Remove Award</button>
+          <button id="add-player-btn">Add Player</button>
+          <button id="remove-player-btn">Remove Player</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
