@@ -17,7 +17,7 @@ let githubToken = "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"; // GitHub Personal
 // GitHub repo info
 const owner = "Tjorn822"; // GitHub username
 const repo = "NLGawards"; // GitHub repo name
-const filePath = "data.json"; // Path to your JSON file in the repo
+const filePath = "../data.json"; // Path to your JSON file in the repo
 
 // Handle login action
 loginBtn.addEventListener("click", () => {
