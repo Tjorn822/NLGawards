@@ -1,60 +1,43 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #1c1c1c;
-  color: #fff;
+  background-color: #1e1e1e;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-.container {
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
+#app {
+  padding: 20px;
 }
 
-h1 {
-  font-size: 2em;
+h1, h2 {
+  color: #f0f0f0;
 }
 
-.login-section,
-.data-section {
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.login-form, .menu {
   margin-top: 20px;
 }
 
 input {
-  padding: 10px;
-  margin: 5px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #444;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #666;
-}
-
-.admin-section {
-  margin-top: 20px;
-}
-
-#data-list {
-  margin-top: 20px;
-}
-
-#data-list div {
-  background-color: #333;
-  padding: 10px;
+  display: block;
   margin: 10px 0;
-  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+#data-display, #admin-actions {
+  margin-top: 20px;
 }
