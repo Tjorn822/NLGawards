@@ -40,6 +40,89 @@
       <button id="back-to-login-admin">Back to Login</button>
     </section>
   </div>
-  <script src="app.js"></script>
+  <script>
+    const loginSection = document.getElementById("login-section");
+    const userDashboard = document.getElementById("user-dashboard");
+    const adminDashboard = document.getElementById("admin-dashboard");
+    const loginBtn = document.getElementById("login-btn");
+    const backToLoginUser = document.getElementById("back-to-login");
+    const backToLoginAdmin = document.getElementById("back-to-login-admin");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const userRoleSpan = document.getElementById("user-role");
+    const dataDisplay = document.getElementById("data-display");
+
+    let jsonData = {
+      players: [],
+      medals: []
+    };
+
+    // Mock data.json loading function
+    async function loadData() {
+      jsonData = {
+        players: [
+          { name: "John Doe", medals: [{ name: "Medal of Honor", reason: "Bravery" }] },
+          { name: "Jane Smith", medals: [{ name: "Service Medal", reason: "Years of Service" }] }
+        ],
+        medals: [
+          { name: "Medal of Honor", description: "Awarded for exceptional bravery." },
+          { name: "Service Medal", description: "Awarded for dedicated service." }
+        ]
+      };
+    }
+
+    function renderData() {
+      const playerHtml = jsonData.players
+        .map(
+          player => `
+          <div class="player">
+            <h3>${player.name}</h3>
+            <ul>
+              ${player.medals
+                .map(
+                  medal => `<li>${medal.name}: ${medal.reason}</li>`
+                )
+                .join("")}
+            </ul>
+          </div>
+        `
+        )
+        .join("");
+
+      dataDisplay.innerHTML = playerHtml;
+    }
+
+    loginBtn.addEventListener("click", () => {
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (username === "Staff" && password === "Oreo") {
+        loginSection.style.display = "none";
+        adminDashboard.style.display = "block";
+        userRoleSpan.textContent = "Admin";
+        renderData();
+      } else if (username === "Guest") {
+        loginSection.style.display = "none";
+        userDashboard.style.display = "block";
+        userRoleSpan.textContent = "User";
+        renderData();
+      } else {
+        alert("Invalid login credentials!");
+      }
+    });
+
+    backToLoginUser.addEventListener("click", () => {
+      userDashboard.style.display = "none";
+      loginSection.style.display = "block";
+    });
+
+    backToLoginAdmin.addEventListener("click", () => {
+      adminDashboard.style.display = "none";
+      loginSection.style.display = "block";
+    });
+
+    // Initialize
+    loadData();
+  </script>
 </body>
 </html>
