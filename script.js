@@ -12,11 +12,11 @@ const addPlayerBtn = document.getElementById("add-player-btn");
 const removePlayerBtn = document.getElementById("remove-player-btn");
 
 let isAdmin = false;
-let githubToken = ""; // GitHub Personal Access Token for Admin
+let githubToken = "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"; // GitHub Personal Access Token for Admin
 
 // GitHub repo info
-const owner = "your-github-username"; // GitHub username
-const repo = "your-repo-name"; // GitHub repo name
+const owner = "Tjorn822"; // GitHub username
+const repo = "NLGawards"; // GitHub repo name
 const filePath = "data.json"; // Path to your JSON file in the repo
 
 // Handle login action
