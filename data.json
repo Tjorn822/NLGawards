@@ -1,0 +1,15 @@
+{
+  "awards": [
+    {
+      "name": "Silver Star",
+      "description": "Awarded for gallantry in action",
+      "awardedTo": "John Doe"
+    }
+  ],
+  "players": [
+    {
+      "name": "John Doe",
+      "rank": "Sergeant"
+    }
+  ]
+}
